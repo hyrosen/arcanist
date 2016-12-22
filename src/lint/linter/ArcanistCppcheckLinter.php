@@ -24,7 +24,7 @@ final class ArcanistCppcheckLinter extends ArcanistExternalLinter {
   }
 
   public function getLinterConfigurationName() {
-    return 'cppcheck';
+    return 'cppcheck-arc';
   }
 
   public function getDefaultBinary() {

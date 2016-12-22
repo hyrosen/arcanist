@@ -1185,7 +1185,7 @@ abstract class ArcanistWorkflow extends Phobject {
     return $this->loadBundleFromConduit(
       $conduit,
       array(
-      'revisionIDs' => array($revision_id),
+      'revision_id' => $revision_id,
     ));
   }
 
@@ -1193,8 +1193,8 @@ abstract class ArcanistWorkflow extends Phobject {
     ConduitClient $conduit,
     $params) {
 
-    $future = $conduit->callMethod('differential.querydiffs', $params);
-    $diff = head($future->resolve());
+    $future = $conduit->callMethod('differential.getdiff', $params);
+    $diff = $future->resolve();
 
     $changes = array();
     foreach ($diff['changes'] as $changedict) {
