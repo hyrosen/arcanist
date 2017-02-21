@@ -133,7 +133,10 @@ final class ArcanistSettings extends Phobject {
         'help' => pht(
           'List of domains to blindly trust SSL certificates for. '.
           'Disables peer verification.'),
-        'default' => array(),
+        'default' => array(
+         'all.phab.dev.bloomberg.com',
+         'ts.phab.dev.bloomberg.com',
+        ),
         'example' => '["secure.mycompany.com"]',
       ),
       'browser' => array(
