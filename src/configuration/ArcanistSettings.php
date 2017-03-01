@@ -136,6 +136,7 @@ final class ArcanistSettings extends Phobject {
         'default' => array(
          'all.phab.dev.bloomberg.com',
          'ts.phab.dev.bloomberg.com',
+         'apireview.dev.bloomberg.com'
         ),
         'example' => '["secure.mycompany.com"]',
       ),
